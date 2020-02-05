@@ -58,3 +58,17 @@ let encoded = tokenizer.encode('one two three, four foo unknowned, five.')
 // encoded == [0, 1, 2, 5, 3, 8, 7, 5, 4, 6]
 
 ````
+
+## Dump to binary data
+
+```js
+import { NNTokenizer } from 'nlp-counter';
+
+let vocabulary = ['one', 'two', 'three', 'four', 'five', ',', '.']
+let tokenizer = new NNTokenizer(vocabulary)
+let input = './corpus.txt'
+let output = './corpus.dump'
+
+tokenizer.binary_dump(input, output)
+
+```
